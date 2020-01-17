@@ -21,7 +21,7 @@ int pop(stack *stk){    //Stack'e silme
         return x;
     }
 }
-void bastir(stack *stk){    //Stack'i yazdırma
+void printList(stack *stk){    //Stack'i yazdırma
     if(stk->top== -1)
         printf("stack is empty..\n");
     else{
@@ -40,7 +40,7 @@ int main()
     int x;
     stack m;
     reset(&m);
-    bastir(&m);
+    printList(&m);
     push(&m,7);
     push(&m,9);
     push(&m,1);
@@ -50,6 +50,6 @@ int main()
     printf("%d.index deleted\n",x);
     push(&m,8);
     push(&m,6);
-    bastir(&m);
+    printList(&m);
     return 0;
 }
